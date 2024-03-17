@@ -25,3 +25,9 @@
 - We are using sudo, to give access for root directories. We can create docker group and add users to whom we want to give access to for using docker resouces available in root.
 - To see all the images on local: sudo docker image ls
 - To run an image: sudo docker run test-docker
+- docker ps: shows list of running containers.
+- docker ps -a, shows list of stop containers.
+- to start a container, docker run -it ubuntu (it is short for interactive, we are starting the container in interactive mode)
+- We get a shell, it is program that takes in command and passes to os for execution.
+- example of a shell prompt, root@2f759e6996e9:/# (we write command here)
+- here root is for root user, '2f759e6996e9' is machine, it is actually for the container we are interacting with. / is the root path and # is for root user priviledge, if a normal user then $.
