@@ -19,3 +19,9 @@
 - Now the application would be running inside a container.
 - We can also push this docker image to docker hub and any machine (test/dev etc.) having docker installed can pull this and run independently without having to configure anything.
 - We typically run our app with command "my-app run", now to run it inside docker container we will use "docker run ...".
+### Few important commands
+- To build an image: sudo docker build -t test-docker .
+- Here -t is for tag, which is image name basically ('test-docker' here). Last . is for using current directly files.
+- We are using sudo, to give access for root directories. We can create docker group and add users to whom we want to give access to for using docker resouces available in root.
+- To see all the images on local: sudo docker image ls
+- To run an image: sudo docker run test-docker
