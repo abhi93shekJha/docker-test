@@ -1,0 +1,22 @@
+version: "3.8"  
+
+services:  # defining various service
+  web:   # it can be any name, these are actually containers
+    build: ./frontend           # this are properties that will be used when running our containers, './frontend' is where we keep our dockerfile
+    ports:
+      - 3000:3000
+    environment: # when we start this app with docker-compose, 3 hosts will be created named web, api and db. We are using db in below connection url.
+      DB_URL : mongodb://db/vidly   # vidly is the name of database
+  api:
+    build: ./backend  # we are keeping our backend dockerfile here
+    ports:
+      - 3001:3001
+  db:
+    image: mong:4.0-xenial  # here for db service, we are pull the image, instead of pull like above. xenial is a linux lightweigh image
+    ports:
+      - 27017:27017   # this is the default port for mongo db. Now we will be able to interact with this service with any existing mongo db client
+    volumes:
+      - vidly: /data/db   # volume helps to persist data on host machine or remote db. Here /data/db is path where we want to persist the data, when container writes something
+                          # this location '/data/db' is not inside but outside of the container
+volumes:  # we have to define the volume since we are using it in db container
+  vidly:           
