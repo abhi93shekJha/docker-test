@@ -25,3 +25,7 @@
 - Now, ping api : it will throw error, because of not having permission to ping.
 - docker exec -it -u root 8c6 sh : starting the shell again as root user.
 - Now, ping api : will get responses now.
+- Container 8c6 is able to get ip of the container named api, this is because docker contains embedded DNS server in it. And the containers have DNS resolver.
+- So, this resolver asks for the IP address corresponding to the container name from DNS server and uses it.
+- So, these conatiners can internally talk to each other when all are up and running. You can see in the docker-compose.yml file, we are specifying database connection using 'mongodb://db/vidly', here 'db' is another container (db host) that 'api' container is talking to, since all are part of the same network.
+- ifconfig : doing this in the interactive shell of a container will show the ip of that container.
