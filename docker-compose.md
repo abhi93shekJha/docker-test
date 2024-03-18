@@ -1,0 +1,6 @@
+- Useful when we want to run application with multiple containers.
+- It is basically a file with key value pair, just like json.
+- In this file we specify ports and build context, volumes, commands for each service.
+- By using this file we won't have to manually run our docker container from command line.
+- Using this all the services listed in this file will be built, and start running automatically.
+- It will automatically download all the dependencies etc and expose the services on specified ports.
