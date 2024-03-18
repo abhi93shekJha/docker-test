@@ -31,3 +31,10 @@
 - We get a shell, it is program that takes in command and passes to os for execution.
 - example of a shell prompt, root@2f759e6996e9:/# (we write command here)
 - here root is for root user, '2f759e6996e9' is machine, it is actually for the container we are interacting with. / is the root path and # is for root user priviledge, if a normal user then $.
+
+### Few commands to interact with containers and images.
+- docker images : to list images
+- docker ps : to list containers
+- docker image rm 123 123 : to remove one or more images with image ids.
+- docker image ls -q : this gives us the list of all image ids.
+- docker image rm $(docker image ls -q)
