@@ -4,3 +4,9 @@
 - By using this file we won't have to manually run our docker container from command line.
 - Using this all the services listed in this file will be built, and start running automatically.
 - It will automatically download all the dependencies etc and expose the services on specified ports.
+
+### Commands
+- docker-compose : all the subcommands are listed. Any of these commands will effect multiple containers in our app.
+- docker-compose build --help :  shows various options when building.
+- docker-compose build : for building for  
+- 
