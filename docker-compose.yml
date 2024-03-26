@@ -2,7 +2,7 @@ version: "3.8"
 
 services:  # defining various service
   web:   # it can be any name, these are actually containers
-    build: ./frontend           # this are properties that will be used when running our containers, './frontend' is where we keep our dockerfile
+    build: ./frontend           # these are properties that will be used when running our containers, './frontend' is where we keep our dockerfile
     ports:
       - 3000:3000
     environment: # when we start this app with docker-compose, 3 hosts will be created named web, api and db. We are using db in below connection url.
